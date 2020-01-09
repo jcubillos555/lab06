@@ -1,4 +1,4 @@
-- name: Create Azure Apache VM Prueba2git
+- name: Create Azure Apache VM Prueba2gitgit 
   hosts: localhost
   connection: local
     
