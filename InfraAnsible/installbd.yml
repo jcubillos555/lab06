@@ -1,0 +1,13 @@
+- hosts: [bds]
+  connection: local
+  remote_user: jcubillos555
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: update cache
+    apt:
+      update_cache: yes
+  - name: Install Mysql
+    apt:
+      name: mysql-server
+      state: latest

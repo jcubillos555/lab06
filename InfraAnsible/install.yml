@@ -1,0 +1,13 @@
+- hosts: [webservers]
+  connection: local
+  remote_user: jcubillos555
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: update cache
+    apt:
+      update_cache: yes
+  - name: Install Apache, php y las librerias
+    apt:
+      name: apache2, php7.2, libapache2-mod-php7.2, python-mysqldb, php-mysql
+      state: latest
